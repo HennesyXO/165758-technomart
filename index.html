@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Техномарт</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Cuprum:400,700|PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <header class="main-header">
@@ -86,16 +87,16 @@
             <div class="feature-slider__slide1">
               <h2 class="feature-slider__title">Перфораторы </h2>
               <p class="feature-slider__description">Настроящие мужские игрушки</p>
-              <button class="icon-left"></button>
-              <button class="icon-right"></button>
+              <label for="" class="icon-left"></label>
+              <label for="" class="icon-right"></label>
               <a href="catalog.html">Открыть каталог</a>
             </div>
 
             <div class="feature-slider__slide2">
               <h2>Дрели</h2>
               <p>Соседям на радость!</p>
-              <button class="icon-left"></button>
-              <button class="icon-right"></button>
+              <label for="" class="icon-left"></label>
+              <label for="" class="icon-right"></label>
               <a href="catalog.html">Открыть каталог</a>
             </div>
           </div>
@@ -113,9 +114,10 @@
         </div>
 
         <div class="catalog">
-
-          <h2 class="catalog__title">Популярные товары: </h2>
-          <a href="catalog.html" class="catalog__btn">все популярные товары</a>
+          <div class="catalog-header">
+            <h2 class="catalog-header__title">Популярные товары: </h2>
+            <a href="catalog.html" class="catalog-header__btn">все популярные товары</a>
+          </div>
 
           <article class="catalog-item">
             <img src="img/bosch-9000.jpg" alt="">
@@ -208,27 +210,35 @@
 
             <div class="services-menu">
               <ul>
-                <li>Доставка</li>
-                <li>Гарантия</li>
-                <li>Кредит</li>
+                <li><label for="">Доставка</label></li>
+                <li><label for="">Гарантия</label></li>
+                <li><label for="">Кредит</label></li>
               </ul>
             </div>
 
-            <div class="delivery">
-              <h2 class="delivery__title">Доставка</h2>
-              <p class="delivery__description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,   поднимая его на ваш на этаж!</p>
+            <div class="delivery-slide">
+              <h2 class="delivery-slide__title">Доставка</h2>
+              <p class="delivery-slide__description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,   поднимая его на ваш на этаж!</p>
+              <div class="delivery-slide__img">
+                <img src="img/truck.png" width="206" height="146" alt="">
+              </div>
             </div>
 
-            <div class="delivery__img">
-              <img src="img/truck.png" width="206" height="146" alt="">
+            <div class="guarantee-slide">
+              <h2 class="guarantee-slide__title">Гарантия</h2>
+              <p class="guarantee-slide__description">Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. <br> Дом уж восстановите как-нибудь сами.</p>
+              <div class="guarantee-slide__img">
+                <img src="img/guarantee.png" width="170" height="172" alt="Гарантия">
+              </div>
             </div>
 
-            <div class="guarantee-img">
-              <img src="img/guarantee.png" width="170" height="172" alt="Гарантия">
-            </div>
-
-            <div class="credit-img">
-              <img src="img/credit.png" width="170" height="172" alt="Кредит">
+            <div class="credit-slide">
+              <h2 class="credit-slide__title">Кредит</h2>
+              <p class="credit-slide__description">Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
+              <button>Отправить заявку</button>
+              <div class="credit-slide__img">
+                <img src="img/credit.png" width="170" height="172" alt="Кредит">
+              </div>
             </div>
 
       </div>
@@ -328,5 +338,27 @@
         </div>
       </div>
     </footer>
+
+    <div class="map-popup">
+      <button class="cross"></button>
+    </div>
+
+    <div class="write-us">
+      <button class="cross-icon"></button>
+      <form action="https://server.com" method="post" >
+        <label for="name">Ваше имя:</label>
+        <input type="text" class="write-us__name" id="name" placeholder="Представьтесь, пожалуйста">
+
+        <label for="email">Ваш e-mail:</label>
+        <input type="text" class="write-us__email" id="email" placeholder="Для отправки ответа">
+
+        <label for="message">Текст письма:</label>
+        <textarea name="" id="message" cols="30" rows="5" placeholder="В свободной форме"></textarea>
+
+      </form>
+      <div class="write-us__btn">
+        <button class="submit">Отправить</button>
+      </div>
+    </div>
   </body>
 </html>
