@@ -3,12 +3,13 @@ body {
   line-height: 24px;
   color: #000000;
   font-weight: normal;
-  font-family: "Cuprum", Arial, sans-serif;
-  font-family: 'PT Sans', sans-serif,  Arial, sans-serif;
+  font-family: 'Cuprum', Arial, sans-serif;
+
 }
 
 h1 {
   font-size: 16px;
+  font-family: 'PT Sans', sans-serif,  Arial, sans-serif;
 
 }
 
