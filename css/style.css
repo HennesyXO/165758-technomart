@@ -10,10 +10,24 @@ body {
 h1 {
   font-size: 16px;
   font-family: 'PT Sans', sans-serif,  Arial, sans-serif;
-
+  color: ee3643;
 }
 
 h2 {
-
+  font-size: 30px;
+  color: #ffffff;
+  line-height: 30px;
 }
 
+.feature-slider__title,
+.guarantee-slide__title,
+.credit-slide__title,
+.delivery-slide__title {
+  font-size: 36px;
+}
+
+h5 {
+  font-size: 24px;
+  color: #ffffff;
+  line-height: 30px;
+}
