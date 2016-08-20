@@ -13,7 +13,7 @@
         <div class="header-top clearfix">
           <a class="logo header-top__logo">Техномарт</a>
           <form method="post" class="header-top__search" name="search">
-            <input type="text" name="search" id="search-field" placeholder="Поиск:">
+            <input type="text" name="search" class="search-field" id="search-field" placeholder="Поиск:">
           </form>
           <div class="header-top__links">
             <a href="#" class="header-top__bookmarks">Закладки: 0</a>
@@ -38,6 +38,7 @@
                 <a href="#"  class="header-user-block__settings">Личный кабинет</a>
               </div>
             </div>
+          </div>
 
             <nav >
               <ul class="main-nav">
@@ -127,9 +128,9 @@
           <div class="main-catalog-filter clearfix">
             <h6 class="main-catalog-filter__title">Сортировка</h6>
             <ul class="main-catalog-filter__sort">
-              <li><a href="#" class="h6">По цене</a></li>
-              <li><a href="#" class="h6">По типу</a></li>
-              <li><a href="#" class="h6">По функционалу</a></li>
+              <li><a href="#" class="filter-link">По цене</a></li>
+              <li><a href="#" class="filter-link">По типу</a></li>
+              <li><a href="#" class="filter-link">По функционалу</a></li>
             </ul>
 
             <div class="filter-pointer">
@@ -138,7 +139,7 @@
             </div>
           </div>
 
-          <div class="items-wrapper">
+          <div class="catalog-items">
             <article class="catalog-item catalog-page-item">
               <img src="img/Bosch-3000.jpg" alt="">
               <div class="buy-hover">
@@ -239,10 +240,10 @@
            </div>
 
           <div class="pagination">
-            <a  class="h6 current" href="#">1</a>
-            <a href="" class="h6">2</a>
-            <a href="" class="h6">3</a>
-            <a  class="h6 next" href="">Следующая</a>
+            <a  class="current" href="#">1</a>
+            <a href="" class="">2</a>
+            <a href="" class="">3</a>
+            <a  class="next" href="">Следующая</a>
           </div>
 
         </div> <!-- main-catalog -->
