@@ -11,7 +11,7 @@
     <header class="main-header">
       <div class="container clearfix">
         <div class="header-top clearfix">
-          <a class="logo header-top__logo logo">Техномарт</a>
+          <a class="header-top__logo logo">Техномарт</a>
           <form method="post" class="header-top__search" name="search">
             <input type="text" name="search"  class="search-field" id="search-field" placeholder="Поиск:">
           </form>
@@ -92,15 +92,21 @@
               <div class="feature-slider__slide1">
                 <h2 class="feature-slider__title">Перфораторы </h2>
                 <p class="feature-slider__description">Настроящие мужские игрушки</p>
-                <label for="" class="icon-left"></label>
-                <label for="" class="icon-right"></label>
-                <a href="catalog.html" class="red-btn">Открыть каталог</a>
+                <div class="label clearfix">
+                  <label for="" class="icon-left"></label>
+                  <label for="" class="icon-right"></label>
+                </div>
+                <a href="catalog.html" class="feature-slider__btn red-btn">Открыть каталог</a>
               </div>
 
               <div class="feature-slider__slide2">
-                <h2>Дрели</h2>
-                <p>Соседям на радость!</p>
-                <a href="catalog.html"  class="red-btn">Открыть каталог</a>
+                <h2 class="feature-slider__title">Дрели</h2>
+                <p class="feature-slider__description">Соседям на радость!</p>
+                <div class="label clearfix">
+                  <label for="" class="icon-left"></label>
+                  <label for="" class="icon-right"></label>
+                </div>
+                <a href="catalog.html"  class="feature-slider__btn red-btn">Открыть каталог</a>
               </div>
             </div>
 
@@ -126,7 +132,7 @@
           <div class="catalog-items">
 
             <article class="catalog-item">
-              <img src="img/bosch-9000.jpg" alt="">
+              <img src="img/bosch-9000.jpg" width="185" height="150" alt="bosch-9000">
               <div class="buy-hover">
                 <a class="buy-hover__btn" href="#">Купить</a>
                 <a class="buy-hover__bookmark" href="#">В закладки</a>
@@ -137,7 +143,7 @@
             </article>
 
             <article class="catalog-item">
-              <img src="img/bosch-3000.jpg" alt="">
+              <img src="img/bosch-3000.jpg"  width="185" height="150" alt="">
               <div class="buy-hover">
                 <a class="buy-hover__btn" href="#">Купить</a>
                 <a class="buy-hover__bookmark" href="#">В закладки</a>
@@ -148,7 +154,7 @@
             </article>
 
             <article class="catalog-item">
-              <img src="img/bosch-6000.jpg" alt="">
+              <img src="img/bosch-6000.jpg"  width="185" height="150" alt="">
               <div class="buy-hover">
                 <a class="buy-hover__btn" href="#">Купить</a>
                 <a class="buy-hover__bookmark" href="#">В закладки</a>
@@ -159,7 +165,7 @@
             </article>
 
             <article class="catalog-item">
-              <img src="img/bosch-2000.jpg" alt="">
+              <img src="img/bosch-2000.jpg"  width="185" height="150" alt="">
               <div class="buy-hover">
                 <a class="buy-hover__btn" href="#">Купить</a>
                 <a class="buy-hover__bookmark" href="#">В закладки</a>
@@ -176,37 +182,39 @@
             <a href="" class="catalog-header__btn  red-btn">все производители</a>
           </div>
 
-          <a class="brands-logo__link" href="#">
-            <img src="img/bosch.jpg" width="175" height="70" alt="" class="brands__logo">
-          </a>
+          <div class="brands-logos">
+            <a class="brands-logo__link" href="#">
+              <img src="img/bosch.jpg" width="175" height="70" alt="" class="brands__logo">
+            </a>
 
-          <a class="brands-logo__link" href="#">
-            <img src="img/Makita.jpg" width="175" height="70" alt="" class="brands__logo">
-          </a>
+            <a class="brands-logo__link" href="#">
+              <img src="img/makita.jpg" width="175" height="70" alt="" class="brands__logo">
+            </a>
 
-          <a class="brands-logo__link" href="#">
-            <img src="img/dewalt.jpg" width="175" height="70" alt="" class="brands__logo">
-          </a>
+            <a class="brands-logo__link" href="#">
+              <img src="img/dewalt.jpg" width="175" height="70" alt="" class="brands__logo">
+            </a>
 
-          <a class="brands-logo__link" href="#">
-            <img src="img/interskol.jpg" width="175" height="70" alt="" class="brands__logo">
-          </a>
+            <a class="brands-logo__link" href="#">
+              <img src="img/interskol.jpg" width="175" height="70" alt="" class="brands__logo">
+            </a>
 
-          <a class="brands-logo__link" href="#">
-            <img src="img/hitachi.jpg" width="175" height="70" alt="" class="brands__logo">
-          </a>
+            <a class="brands-logo__link" href="#">
+              <img src="img/hitachi.jpg" width="175" height="70" alt="" class="brands__logo">
+            </a>
 
-          <a class="brands-logo__link" href="#">
-            <img src="img/lg.jpg" width="175" height="70" alt="" class="brands__logo">
-          </a>
+            <a class="brands-logo__link" href="#">
+              <img src="img/lg.jpg" width="175" height="70" alt="" class="brands__logo">
+            </a>
 
-          <a class="brands-logo__link" href="#">
-            <img src="img/aeg.jpg" width="175" height="70" alt="" class="brands__logo">
-          </a>
+            <a class="brands-logo__link" href="#">
+              <img src="img/aeg.jpg" width="175" height="70" alt="" class="brands__logo">
+            </a>
 
-          <a class="brands-logo__link" href="#">
-            <img src="img/Metabo.jpg" width="175" height="70" alt="" class="brands__logo">
-          </a>
+            <a class="brands-logo__link" href="#">
+              <img src="img/metabo.jpg" width="175" height="70" alt="" class="brands__logo">
+            </a>
+          </div>
         </div>
 
       </div>       <!-- container -->
@@ -289,9 +297,8 @@
       <div class="footer-topline clearfix">
         <div class="container clearfix">
           <div class="footer-info">
-            <div class="logo footer-logo">
-              <h3> <a href="index.html">Техномарт</a></h3>
-            </div>
+            <a href="index.html" class="footer-logo">Техномарт</a>
+
 
             <div class="address-phone">
               <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>

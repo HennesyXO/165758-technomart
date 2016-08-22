@@ -1,6 +1,5 @@
 body
  {
-  width: 1200px;
   margin: 0;
   padding: 0;
   font-size: 13px;
@@ -32,7 +31,7 @@ h3 {
   line-height: 24px;
   text-transform: uppercase;
   font-weight: normal;
-  display: inline-block;
+
 }
 
 .services-header__title,
@@ -66,11 +65,6 @@ legend {
   color: #000000;
 }
 
-/*span {
-  font-size: 17px;
-  line-height: 18px;
-  color: #999999;
-}*/
 /*общие стили для красных кнопок*/
 .red-btn {
   display: block;
@@ -117,36 +111,54 @@ legend {
 .header-top__logo {
   font-size: 24px;
   float: left;
-  width: 120px;
+  width: 220px;
   height: 40px;
   background-color: #ee3643;
   color: #ffffff;
-  padding: 10px 50px;
+  padding: 0 0;
   text-align: center;
   box-shadow: 0 5px 0 0 #b52933;
 }
 
+.header-top__logo:hover {
+  background-color: #ca2c37;
+  box-shadow: 0 5px 0 0 #9a212a;
+}
+
+.header-top__logo:active {
+  background-color: #ba2732;
+  box-shadow: 0 5px 0 0 #8e1e26;
+}
+
 .header-top__search {
   outline: 3px dotted white;
-  width: 250px;
+  width: 270px;
   float: left;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
+.header-top__search:focus {
+  background-color: #fff;
+}
+
 .search-field {
   font-size: 18px;
   color: #ffffff;
   background-color: #293449;
-  width: 200px;
+  width: 270px;
   border: 1px solid  #293449;
-  margin: 15px 0;
-  margin-left: 45px;
+  padding: 6px 0;
+  padding-left: 45px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+.search-field:focus {
+  background-color: #fff;
+ }
 
 .header-top__links {
   float: right;
@@ -163,7 +175,7 @@ legend {
   text-decoration: none;
   color: #ffffff;
   font-size: 17px;
-  padding: 12px 0;
+  padding: 8px 0;
 }
 
 .header-top__order {
@@ -172,14 +184,14 @@ legend {
 
 }
 
-/*.header-middle__title,
-.header-info,
-.header-user-block
- {
-  float: left;
-  width: 33.3%;
+.header-top__order:hover {
+  background-color: #5fbb2d;
+ }
 
-}*/
+.header-top__order:active {
+  background-color: #518534;
+ }
+
 .header-sky-blue {
   background-color: #f1f5f7;
 
@@ -217,11 +229,11 @@ legend {
   text-align: center;
   padding: 10px 35px 10px 65px;
   text-decoration: none;
-  margin-top: 15px;
+
 }
 
 .header-info__adress {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 24px;
   color: #32425c;
   padding: 10px 0;
@@ -240,36 +252,38 @@ legend {
 
 .header-user-block__signin,
 .header-user-block__signup {
-  /*display: inline-block;
-  vertical-align: top;*/
-
+  display: block;
+  background-color: #fff;
   font-size: 21px;
   color: #000000;
-  text-align: center;
-  padding: 15px 25px;
+  /*text-align: center;*/
   text-decoration: none;
-  background-color: #fff;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  outline: 1px dotted black;
+
 }
 
 .header-user-block__signin {
-  padding-left: 50px;
-  padding-right: 20px;
-  margin-right: 10px;
-  margin-left: auto;*/
-  width: 120px;
-
-
+  width: 70px;
+  float: left;
+  padding: 15px 20px 15px 50px;
 }
 
 .header-user-block__signup {
   margin-right: 0;
-  width: 150px;
+  width: 100px;
+  float: right;
+  padding: 15px 25px;
+}
+
+.header-user-block__signin:hover,
+.header-user-block__signup:hover {
+  color: #ee3643;
 
 }
+
+.header-user-block__signin:active,
+.header-user-block__signup:active {
+  color: #d2d2d2;
+ }
 
 nav {
   border-bottom: 5px solid #293449;
@@ -318,7 +332,7 @@ nav {
   float: left;
   width: 300px;
   height: 120px;
-  /*padding: 20px 25px;*/
+  padding: 20px 25px;
   margin-right: 20px;
   margin-bottom: 20px;
   -webkit-box-sizing: border-box;
@@ -328,24 +342,40 @@ nav {
 
 .feature-item-row:last-child {
   margin-right: 0;
-  /*width: 100%;*/
+
 }
 
+
 .feature-item__title {
-  width: 135px;
-  margin: 25px 160px 15px 20px;
+  width: 160px;
+  margin: 0;
+  margin-bottom: 10px;
   font-size: 24px;
 
 }
 
 .feature-item__btn {
-  margin: 0 140px 20px 25px;
-  padding: 10px 20px;
-  width: 130px;
+  margin: 0 140px 0 0;
+  padding: 10px 10px;*/
+  width: 140px;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.1);
   text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 2px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+.feature-item__btn:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.feature-item__btn:active {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .feature-item--materials {
@@ -382,9 +412,58 @@ nav {
 .feature-slider {
   float: left;
   width: 620px;
-  height: 270px;
+  height: 265px;
   margin-right: 20px;
+}
+
+.feature-slider__slide1 {
+  width: 570px;
+  height: 215px;
+  padding: 25px;
   background: url(../img/perf-worker.jpg ) no-repeat 100%;
+}
+
+.feature-slider__slide2 {
+  width: 570px;
+  height: 215px;
+  padding: 25px;
+  background: url(../img/drill-worker.jpg ) no-repeat 100%;
+}
+
+.feature-slider__title {
+ color: #ffffff;
+ margin: 0;
+ padding-bottom: 10px;
+}
+
+.feature-slider__description {
+ color: #ffffff;
+ margin: 0;
+ padding-bottom: 25px;
+ font-size: 18px;
+ line-height: 24px;
+
+}
+
+.icon-left {
+
+ width: 45px;
+ height: 45px;
+ float: left;
+ background-color: #000;
+}
+
+.icon-right {
+ width: 45px;
+ height: 45px;
+ float: right;
+ background-color: #000;
+}
+
+.feature-slider__btn {
+  width: 140px;
+  text-transform: uppercase;
+  margin-top: 50px;
 }
 
 .feature-item-column {
@@ -397,23 +476,32 @@ nav {
   background-color: #f7f3ec;
   padding: 25px;
   width: 890px;
+  margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.catalog-header__title {
+  float: left;
+  width: 400px;
+  margin: 0;
+  padding: 7px 0;
 }
 
 .catalog-header__btn {
   float: right;
-  background-color: #ee3643;
+  width: 150px;
   display: block;
-  font-size: 14px;
-  line-height: 18px;
+  background-color: #ee3643;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
   padding: 10px 50px;
   color: #ffffff;
-  width: 255px;
+  font-size: 14px;
+  line-height: 18px;
   border-radius: 2px;
 }
+
 /*карточка товара*/
 .catalog-items {
   margin-bottom: 20px;
@@ -424,12 +512,12 @@ nav {
 .catalog-item {
   display: inline-block;
   vertical-align: top;
-  min-height: 315px;
+  height: 315px;
   width: 215px;
   padding: 20px 15px;
-  border: 2px solid #e5e5e5;
+  border: 1px solid #e5e5e5;
   margin-right: 20px;
-  margin-bottom: 20px;
+
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -439,19 +527,65 @@ nav {
   margin-right: 0;
 }
 
+.catalog-item img:hover {
+  display: none;
+}
+
+.buy-hover:hover {
+  display: block;
+  width: 200px;
+  height: 200px;
+}
+
+.buy-hover__btn {
+  width: 135px;
+  display: block;
+  background-color: #63a63e;
+  padding: 10px;
+  text-align: center;
+  color: #ffffff;
+  box-shadow: 3px 0 0 #367315;
+}
+
+
+.buy-hover__bookmark{
+  width: 135px;
+  display: block;
+  background-color: #ffffff;
+  padding: 10px;
+  text-align: center;
+  color: #32425c;
+  border: 3px solid #63a63e;
+
+
+}
+
 .catalog-item__description {
   margin: 0;
+  width: 165px;
+  text-align: center;
 }
+
 .catalog-item__discount {
   font-size: 17px;
   line-height: 18px;
   color: #999999;
   text-decoration: line-through;
+  width: 165px;
+  display: block;
+  padding: 10px 0;
+  text-align: center;
+
 }
 
 .catalog-item__price {
-
+ width: 130px;
+ margin: 0 auto;
+ -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ box-sizing: border-box;
 }
+
 /*бренды*/
 .brands-logo {
   margin-bottom: 80px;
@@ -459,16 +593,25 @@ nav {
 
 .brands-logo__link {
   float: left;
-}
-
-.brands__logo {
-
+  width: 215px;
+  height: 140px;
   border: 2px solid #e5e5e5;
   padding: 45px 17px;
   margin-right: 20px;
   margin-bottom: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
+
+.brands-logos {
+ margin: 0;
+}
+
+.brands-logo__link:nth-child(4n) {
+  margin-right: 0;
+}
 
 /*сервисы*/
 .services {
@@ -502,8 +645,10 @@ nav {
   width: 240px;
 }
 
-.services-menu ul:after {
+.services-menu ul::after {
   background-image: url(../img/vertical.png);
+
+
 }
 
 .services-menu li{
@@ -516,6 +661,8 @@ nav {
 
 .slide-block {
   padding-bottom: 100px;
+  background: url(../img/truck.png) no-repeat right center;
+
 }
 
 .delivery-slide,
@@ -527,12 +674,13 @@ nav {
 }
 
 .delivery-slide__title {
+  margin: 0;
+  padding-bottom: 30px;
 
 }
 
 .delivery-slide__description {
-
-  background: url(../img/truck.png) no-repeat right center;
+  margin: 0;
 }
 
 
@@ -553,7 +701,7 @@ nav {
   float: right;
   width: 300px;
   padding-top: 80px;
-  margin-bottom: 85px;
+  padding-bottom: 85px;
 }
 
 .company-title {
@@ -564,7 +712,7 @@ nav {
 .company-contacts p {
   font-size: 13px;
   line-height: 24px;
-
+  padding-bottom: 30px;
 }
 
 .company-description ul {
@@ -573,11 +721,11 @@ nav {
  padding: 0;
  width: 215px;
  /*margin-top: 20px;*/
- margin-bottom: 40px;
+ padding-bottom: 40px;
 
 }
 
-.company-description ul li {
+.company-description li {
   font-size: 18px;
   font-weight: normal;
   line-height: 20px;
@@ -594,13 +742,13 @@ nav {
 }
 
 .map {
-  margin-bottom: 40px;
+  padding: 20px 0 40px 0;
 }
 
 .mail-to {
   width:
 }
-
+/*Футер*/
 
 .main-footer {
   background-color: #32425c;
@@ -618,19 +766,28 @@ nav {
   width: 600px;
 }
 
-.footer-logo {
-  width: 220px;
-  height: 65px;
-
+.footer-logo{
+  display: block;
+  width: 120px;
+  height: 30px;
+  padding: 15px 50px;
+  text-decoration: none;
+  font-size: 30px;
+  line-height: 30px;
+  background-color: #ee3643;
+  color: #ffffff;
+  text-align: center;
+  box-shadow: 0 5px 0 0 #b52933;
 }
 
-.footer-logo a{
-  color: #ffffff;
-  text-decoration: none;
-  display: block;
-  width: 135px;
-  padding: 20px 0px;
-  text-align: center;
+.footer-logo:hover {
+  background-color: #ca2c37;
+  box-shadow: 0 5px 0 0 #9a212a;
+}
+
+.footer-logo:active {
+  background-color: #ba2732;
+  box-shadow: 0 5px 0 0 #8e1e26;
 }
 
 .address-phone p {
@@ -687,16 +844,6 @@ nav {
   background-color: #293449;
 }
 
-.footer-logo {
-  height: 60px;
-  width: 140px;
-  padding: 10px 50px;
-  background-color: #ee3643;
-  font-size: 30px;
-  color: #ffffff;
-  text-align: center;
-  box-shadow: 0 5px 0 0 #b52933;
-}
 
 .copyrights {
   float: left;
@@ -745,21 +892,44 @@ nav {
 
 }
 
+.username:active {
+  color: #cacaca;
+}
+
 .user-links {
 
 }
 
 .header-user-block__my-orders {
-
+  color:
 }
+
+.header-user-block__my-orders:hover {
+  color: #ee3643;
+}
+
+.header-user-block__my-orders:active {
+  color: #c5cad0;
+}
+
+.header-user-block__settings:hover  {
+  color: #ee3643;
+}
+
+.header-user-block__settings:active  {
+  color: #c5cad0;
+}
+
+
 
 .breadcrumbs li{
   display: inline-block;
 
 }
-.breadcrumbs li a{
+.breadcrumbs a{
   display: block;
   text-decoration: none;
+  text-transform: uppercase;
   color: #000000;
   font-size: 16px;
   line-height: 18px;
@@ -781,21 +951,93 @@ nav {
 
 }
 
+.filter-name {
+ padding: 11px 15px;
+ margin: 0;
+ font-size: 13px;
+ line-height: 18px;
+ background-color: #f7f3ec;
+ text-transform: uppercase;
+
+}
+ fieldset {
+ border-style: none;
+ }
+
+legend {
+font-size: 17px;
+line-height: 30px;
+color: #0000000;
+text-transform: uppercase;
+padding: 20px 0;
+}
+
+label {
+  width: 175px;
+  float: right;
+  font-size: 14px;
+line-height: 20px;
+color: #0000000;
+text-transform: uppercase;
+  padding: 12px 0;
+}
+
+input {
+  width: 25px;
+  padding-left: 10px;
+  float: left;
+ }
+button[type="submit"] {
+  font-size: 13px;
+  line-height: 18px;
+  color: #000;
+  width: 140px;
+  padding: 10px 30px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  text-transform: uppercase;
+
+
+  }
 .main-catalog {
   float: right;
   width: 700px;
   margin-left: 0;
 }
 
+.main-catalog-filter {
+  padding-left: 0;
+}
+
 .main-catalog-filter__title {
   float: left;
   width: 230px;
+
+ padding: 11px 15px;
+ margin: 0;
+ font-size: 13px;
+ line-height: 18px;
+ background-color: #f7f3ec;
+ text-transform: uppercase;
+
 }
 
 .main-catalog-filter__sort {
   float: right;
   font-size: 0;
   width: 430px;
+  padding-left: 11px 5px;
+}
+
+.filter-link {
+  padding: 11px 15px;
+ margin: 0;
+ font-size: 13px;
+ line-height: 18px;
+ background-color: #f7f3ec;
+ text-transform: uppercase;
+ text-decoration: none;
 }
 
 .main-catalog-filter__sort li {
