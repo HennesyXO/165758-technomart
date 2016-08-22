@@ -399,15 +399,6 @@ nav {
   background-color: #f6b22d;
 
  }
-/*временные стили*/
-.feature-slider__slide2,
-.write-us,
-.map-popup,
-.buy-hover,
-.guarantee-slide,
-.credit-slide {
-  display: none;
-}
 
 .feature-slider {
   float: left;
@@ -417,17 +408,14 @@ nav {
 }
 
 .feature-slider__slide1 {
-  width: 570px;
-  height: 215px;
   padding: 25px;
   background: url(../img/perf-worker.jpg ) no-repeat 100%;
 }
 
 .feature-slider__slide2 {
-  width: 570px;
-  height: 215px;
   padding: 25px;
   background: url(../img/drill-worker.jpg ) no-repeat 100%;
+  display: none;
 }
 
 .feature-slider__title {
@@ -527,6 +515,9 @@ nav {
   margin-right: 0;
 }
 
+.buy-hover {
+  display: none;
+}
 
 .buy-hover:hover {
   display: block;
@@ -662,6 +653,14 @@ nav {
 
 }
 
+.guarantee-slide {
+  display: none;
+}
+
+.credit-slide {
+  display: none;
+ }
+
 .delivery-slide,
 .guarantee-slide,
 .credit-slide {
@@ -742,8 +741,16 @@ nav {
   padding: 20px 0 40px 0;
 }
 
+.map-popup {
+  display: none;
+}
+
 .mail-to {
-  width:
+  width: 300px;
+}
+
+.write-us {
+  display: none;
 }
 /*Футер*/
 
@@ -880,13 +887,14 @@ nav {
 }
 
 .username {
-  width: 180px;
+  width: 200px;
   display: block;
-  padding: 15px 65px 15px 45px;
+  padding: 10px 60px 10px 40px;
   color: #424242;
   text-decoration: none;
   background-color: #fff;
-
+  font-size: 21px;
+  line-height: 18px
 }
 
 .username:active {
@@ -898,7 +906,10 @@ nav {
 }
 
 .header-user-block__my-orders {
-  color:
+  color: #32425c;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 10px 15px;
 }
 
 .header-user-block__my-orders:hover {
@@ -907,6 +918,13 @@ nav {
 
 .header-user-block__my-orders:active {
   color: #c5cad0;
+}
+
+.header-user-block__settings {
+  color: #32425c;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 10px 15px;
 }
 
 .header-user-block__settings:hover  {
@@ -974,7 +992,7 @@ label {
   display: inline-block;
   font-size: 14px;
   line-height: 20px;
-  color: #0000000;
+  color: #000000;
   text-transform: uppercase;
   padding: 12px 0;
 }
@@ -1050,3 +1068,11 @@ button[type="submit"] {
   margin: 0;
 }
 
+.catalog-page-item {
+  margin-bottom: 20px;
+}
+
+.catalog-page-item:nth-child(4n) {
+  margin-right: 20px;
+
+}
