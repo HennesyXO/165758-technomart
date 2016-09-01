@@ -14,7 +14,6 @@
           <a class="header-top__logo logo">Техномарт</a>
           <form method="post" class="header-top__search" name="search">
 
-            <button class="search-btn"></button>
             <input type="text" name="search" class="search-field" id="search-field" placeholder="Поиск:">
           </form>
           <div class="header-top__links">
@@ -378,22 +377,32 @@
       <button class="cross"></button>
     </div>
 
-    <div class="write-us">
-      <button type="button" class="cross-icon"></button>
-      <form action="https://server.com" method="post" >
-        <label for="name">Ваше имя:</label>
-        <input type="text" class="write-us__name" id="name" placeholder="Представьтесь, пожалуйста">
+    <div class="feedback container">
+      <a href="#" class="feedback__close" title="Закрыть"></a>
+      <form action="https://server.com" method="post"  class="feedback-form clearfix">
+        <div class="feedback-block">
+          <div class="feedback-userdata">
+            <div class="feedback-left-column">
+              <label  class="feedback__labels" for="name">Ваше имя:</label>
+              <input type="text" id="name" placeholder="Представьтесь, пожалуйста">
+            </div>
 
-        <label for="email">Ваш e-mail:</label>
-        <input type="text" class="write-us__email" id="email" placeholder="Для отправки ответа">
+            <div class="feedback-right-column">
+              <label  class="feedback__labels" for="email">Ваш e-mail:</label>
+              <input type="text" id="email" placeholder="Для отправки ответа" required>
+            </div>
+          </div>
 
-        <label for="message">Текст письма:</label>
-        <textarea name="" id="message" cols="30" rows="5" placeholder="В свободной форме"></textarea>
+          <label  class="feedback-form__labels" for="message">Текст письма:</label>
+          <textarea name="" id="message" rows="5" placeholder="---" required></textarea>
+        </div>
 
+
+        <div class="feedback-btn">
+          <button class="feedback-btn__submit">Отправить</button>
+        </div>
       </form>
-      <div class="write-us__btn">
-        <button class="submit">Отправить</button>
-      </div>
+
     </div>
   </body>
 </html>

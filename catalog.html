@@ -14,7 +14,6 @@
           <a class="header-top__logo">Техномарт</a>
           <form method="post" class="header-top__search" name="search">
 
-            <button class="search-btn"></button>
             <input type="text" name="search" class="search-field" id="search-field" placeholder="Поиск:">
           </form>
           <div class="header-top__links">
@@ -107,7 +106,7 @@
             </fieldset>
 
 
-            <fieldset class="filter-producers clearfix">
+            <fieldset class="filter-producers">
               <legend>Производители:</legend>
               <input type="checkbox" name="producers" value="bosch" id="bosch" checked>
               <label for="bosch">Bosch</label>
@@ -125,7 +124,7 @@
               <label for="hitachi">Hitachi</label>
             </fieldset>
 
-            <fieldset class="filter-sourse-feed clearfix">
+            <fieldset class="filter-sourse-feed">
               <legend>Питание:</legend>
               <input type="radio" name="sourse-feed" value="accumulator" id="accumulator" checked>
               <label for="accumulator">Акумуляторные</label>
@@ -133,7 +132,7 @@
               <input type="radio" name="sourse-feed" value="power-network" id="power-network">
               <label for="power-network">Сетевые</label>
             </fieldset>
-            <button type="submit">Показать</button>
+            <button type="submit" class="main-filter-btn">Показать</button>
           </form>
         </aside>
 
@@ -271,7 +270,7 @@
            </div>
 
           <div class="catalog-paginator">
-            <span class="catalog-paginator-active">1</span>
+            <a class="catalog-paginator-active">1</a>
             <a href="#">2</a>
             <a href="#">3</a>
             <a href="#" class="catalog-paginator-next">Следующая</a>
