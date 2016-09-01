@@ -631,11 +631,11 @@ nav {
   background-color: #ee3643;
 }
 
-.feature-slider-drill:checked~ .feature-slider-items {
+.feature-slider-drill:checked ~ .feature-slider-items {
   transform: translate(0);
 }
 
-.feature-slider-perforator:checked~ .feature-slider-items {
+.feature-slider-perforator:checked ~ .feature-slider-items {
   transform: translate(-620px);
 }
 
@@ -679,7 +679,7 @@ nav {
 
 /*карточка товара*/
 .catalog-items {
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
   padding-right: 0;
   font-size: 0;
 }
@@ -693,6 +693,7 @@ nav {
   text-align: center;
   border: 1px solid #e5e5e5;
   margin-right: 20px;
+  margin-bottom: 20px;
   overflow: hidden;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1187,6 +1188,7 @@ nav {
 .footer-menu__bottom a {
   color: #ffd180;
   width: 130px;
+  text-align: right;
 }
 
 .footer-menu__top a:hover,
@@ -1390,12 +1392,13 @@ nav {
 }
 
 .breadcrumbs {
-  position: relative;
+  padding: 0;
   font-size: 0;
   list-style: none;
 }
 
 .breadcrumbs li {
+  position: relative;
   display: inline-block;
   vertical-align: top;
 }
@@ -1403,11 +1406,21 @@ nav {
 .breadcrumbs li::after {
   position: absolute;
   top: 25px;
-  left: 52px;
-  width: 8px;
+  right: -10px;
+  width: 15px;
   height: 12px;
   content: "";
-  background: url(../img/icon-right-small.png) repeat;
+  background: url(../img/icon-right-small.png) no-repeat;
+}
+
+.breadcrumbs li:first-child::before {
+  position: absolute;
+  top: 25px;
+  left: 0px;
+  width: 15px;
+  height: 12px;
+  content: "";
+  background: url(../img/icon-home.png) no-repeat;
 }
 
 .breadcrumbs a{
@@ -1417,7 +1430,8 @@ nav {
   color: #000000;
   font-size: 13px;
   line-height: 18px;
-  padding: 20px 10px;
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  padding: 20px 17px;
 }
 
 .perforators {
@@ -1568,7 +1582,7 @@ label {
 .filter-producers label::before {
   position: absolute;
   top: 10px;
-  left: -35px;
+  left: 0px;
   width: 25px;
   height: 25px;
   content: "";
@@ -1583,7 +1597,7 @@ label {
 
 .filter-sourse-feed label {
   position: relative;
-  margin-left: 35px;
+  padding-left: 35px;
   padding: 0 0 20px 0;
 
 }
@@ -1662,7 +1676,7 @@ input[type="checkbox"] + label:hover::before {
 }
 
 .filter-link {
-  padding: 0 40px 0 20px;
+  margin: 0 40px 0 20px;
   text-align: left;
   text-transform: uppercase;
   text-decoration: underline;
@@ -1763,8 +1777,8 @@ input[type="checkbox"] + label:hover::before {
 
 .catalog-paginator {
   font-size: 0;
-  margin-top: 32px;
-  margin-bottom: 60px;
+  padding-top: 32px;
+  padding-bottom: 60px;
 }
 
 .catalog-paginator a,
