@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Техномарт</title>
-    <link href='https://fonts.googleapis.com/css?family=Cuprum:400,700|PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Cuprum:400,400italic,700,700italic&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/normalize.css"  type="text/css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
@@ -20,6 +21,7 @@
             <a href="#" class="header-top__bookmarks">Закладки: 0</a>
             <a href="#" class="header-top__cart">Корзина: 0</a>
             <a href="#" class="header-top__order">Оформить заказ</a>
+
           </div>
         </div>
       </div>
@@ -75,7 +77,7 @@
           <div class="feature-item-row clearfix">
             <div class="feature-item feature-item--materials new-item">
               <h4 class="feature-item__title">Материалы</h4>
-              <a href="#" class="feature-item__btn">на любой вкус</a>
+              <a href="#" class="feature-item__btn"> На любой вкус</a>
             </div>
 
             <div class="feature-item feature-item--tools">
@@ -91,15 +93,16 @@
 
           <div class="feature-item-row clearfix">
             <div class="feature-slider">
-
-                <label for="label__icon-left" class="icon-left"></label>
-                <label for="label__icon-right" class="icon-right"></label>
+              <input type="text" id="label__icon-left">
+              <label for="label__icon-left" class="icon-left"></label>
+              <input type="text" id="label__icon-right">
+              <label for="label__icon-right" class="icon-right"></label>
 
               <div class="slider-controls">
-                <input name="feature-slider-controlls" class="feature-slider-drill" type="radio" id="feature-slider-drill" checked>
+                <input name="toggle" type="radio" id="feature-slider-drill" checked>
                 <label for="feature-slider-drill"></label>
 
-                <input name="feature-slider-controlls" class="feature-slider-perforator" type="radio" id="feature-slider-perforator">
+                <input name="toggle" type="radio" id="feature-slider-perforator">
                 <label for="feature-slider-perforator"></label>
               </div>
 
@@ -250,9 +253,16 @@
 
               <div class="services-menu">
                 <ul>
-                  <li><label for="" class="services-menu-active">Доставка</label></li>
-                  <li><label for="">Гарантия</label></li>
-                  <li><label for="">Кредит</label></li>
+                  <li><label for="delivery-slide" class="services-menu-active">Доставка</label>
+                  <input type="text" id="delivery-slide">
+                  </li>
+
+                  <li><label for="guarantee-slide">Гарантия</label>
+                  <input type="text" id="guarantee-slide">
+                  </li>
+                  <li><label for="credit-slide">Кредит</label>
+                  <input type="text" id="credit-slide">
+                  </li>
                 </ul>
               </div>
 
@@ -397,7 +407,7 @@
           </div>
 
           <label  class="feedback-form__labels" for="message">Текст письма:</label>
-          <textarea name="" id="message" rows="5" placeholder="---" required></textarea>
+          <textarea name="message" id="message" rows="5" placeholder="---" required></textarea>
         </div>
 
 

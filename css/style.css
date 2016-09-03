@@ -65,6 +65,12 @@ legend {
   line-height: 30px;
   color: #000000;
 }
+/*Защита от больших картинок*/
+
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 /*общие стили для красных кнопок*/
 .red-btn {
@@ -129,7 +135,6 @@ legend {
 }
 
 .header-top__search {
-  outline: 3px dotted white;
   width: 270px;
   position: relative;
   float: left;
@@ -145,17 +150,20 @@ legend {
 
 .search-field {
   position: relative;
+  width: 270px;
+  padding: 8px;
+  padding-left: 45px;
+  border: 1px solid  #293449;
   display: inline-block;
+  vertical-align: top;
+  background-color: #293449;
+
+  opacity: 0.3;
   font-size: 17px;
   line-height: 18px;
   color: #ffffff;
-  background-color: #293449;
-  width: 270px;
-  border: 1px solid  #293449;
-  padding: 8px 0;
-  opacity: 0.3;
   background: url(../img/icon-search.png) 15px 8px no-repeat;
-  padding-left: 45px;
+
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -167,6 +175,8 @@ legend {
 
 .search-field:focus {
   background-color: #fff;
+  color: #000000;
+  /*max-width: 170px;*/
  }
 
 .header-top__links {
@@ -181,12 +191,12 @@ legend {
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  text-align: center;
+  /*text-align: center;*/
   width: 150px;
   text-decoration: none;
   color: #ffffff;
   font-size: 17px;
-  padding: 8px 0 8px 40px;
+  padding: 8px 0 8px 50px;
  -webkit-box-sizing: border-box;
  -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -215,12 +225,12 @@ legend {
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  text-align: center;
+  /*text-align: center;*/
   width: 150px;
   text-decoration: none;
   color: #ffffff;
   font-size: 17px;
-  padding: 8px 0 8px 40px;
+  padding: 8px 0 8px 50px;
  -webkit-box-sizing: border-box;
  -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -279,7 +289,7 @@ legend {
 }
 
 .header-middle  {
-  padding-bottom: 40px;
+  padding-bottom: 38px;
   border: 1px solid transparent;
 }
 
@@ -312,7 +322,7 @@ legend {
   color: #e9292a;
   border: 2px solid #ffffff;
   text-align: center;
-  padding: 11px 35px 11px 60px;
+  padding: 13px 35px 10px 60px;
   text-decoration: none;
 
 }
@@ -364,7 +374,7 @@ legend {
   content: "";
   position: absolute;
   top: 15px;
-  left: 20px;
+  left: 15px;
   width: 20px;
   height: 18px;
   background: url(../img/icon-login.png) no-repeat;
@@ -542,6 +552,10 @@ nav {
   margin-right: 20px;
 }
 
+.feature-slider input {
+  display: none;
+}
+
 .feature-slider-items {
   transition: transform .8s ease;
 }
@@ -630,10 +644,12 @@ nav {
 .slider-controls label {
   display: inline-block;
   vertical-align: top;
+  font-size: 10px;
   width: 10px;
   height: 10px;
   margin: 0 4px;
   background-color: #ffffff;
+  color: #ffffff;
   border-radius: 50%;
   border: 3px solid #ffffff;
   /*z-index: 100;*/
@@ -879,6 +895,7 @@ nav {
   width: 122px;
   padding: 10px 0;
   margin: 0 auto;
+  margin-left: 42px;
   margin-bottom: 20px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -970,6 +987,10 @@ nav {
   min-height: 272px;
   content: "";
   background: 0 0 url(../img/vertical.png) no-repeat;
+}
+
+.services-menu input {
+  display: none;
 }
 
 .services-menu label {
@@ -1356,15 +1377,14 @@ nav {
   position: relative;
   width: 190px;
   display: block;
-  padding: 10px 65px 10px 46px;
-  margin-bottom: 10px;
+  padding: 14px 65px 14px 46px;
+  margin-bottom: 5px;
   color: #424242;
   text-decoration: none;
   background-color: #fff;
   font-size: 21px;
   line-height: 18px;
 }
-
 
 .username:active {
   color: #cacaca;
@@ -1373,7 +1393,7 @@ nav {
 .username::before {
   content: "";
   position: absolute;
-  top: 10px;
+  top: 12px;
   left: 15px;
   width: 18px;
   height: 18px;
@@ -1499,7 +1519,7 @@ nav {
 .perforators {
   background-color: #f2f6f8;
   display: block;
-  padding: 30px;
+  padding: 31px;
   margin: 0;
   margin-bottom: 20px;
 
@@ -1514,7 +1534,7 @@ nav {
 }
 
 .filter-name {
-  padding: 11px 15px;
+  padding: 11px 18px;
   margin: 0;
   font-size: 13px;
   line-height: 18px;
@@ -1727,13 +1747,14 @@ input[type="checkbox"] + label:hover::before {
 }
 
 .main-catalog-filter {
-  padding: 9px 15px;
+  padding: 9px 18px;
   margin-bottom: 20px;
   background-color: #f7f3ec;
+  font-family: 'PT Sans', 'Arial', sans-serif;
 }
 
 .main-catalog-filter__title {
-  width: 200px;
+  width: 222px;
   float: left;
   margin: 0;
   font-size: 13px;
@@ -1743,7 +1764,7 @@ input[type="checkbox"] + label:hover::before {
 
 .main-catalog-filter__sort {
   float: left;
-  width: 420px;
+  width: 380px;
   padding-left: 0;
   font-size: 0;
 }
@@ -1753,10 +1774,12 @@ input[type="checkbox"] + label:hover::before {
   vertical-align: top;
   font-size: 13px;
   line-height: 18px;
+  width: 120px;
 }
 
 .filter-link {
-  margin: 0 40px 0 20px;
+
+  /*margin: 0 38px 0 20px;*/
   text-align: left;
   text-transform: uppercase;
   text-decoration: underline;
@@ -1789,27 +1812,23 @@ input[type="checkbox"] + label:hover::before {
 
 .pointer-up {
   position: relative;
-  /*margin-left: 40px;*/
   text-decoration: none;
 }
 
 .pointer-down {
   position: relative;
-  /*margin-right: 0;*/
   text-decoration: none;
 }
-
-
 
 .pointer-up::before  {
   position: absolute;
   top: 20px;
-  left: 5px;
+  left: 10px;
   width: 10px;
   height: 12px;
   display: inline-block;
   font-size: 30px;
-  font-family: 'PT Sans', 'Arial', sans-serif, ;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   color: #c6c2bd;
   background: url(../img/icon-up.png) no-repeat;
   content: "";
@@ -1836,7 +1855,7 @@ input[type="checkbox"] + label:hover::before {
 .pointer-down::before  {
   position: absolute;
   top: 20px;
-  left: 38px;
+  left: 40px;
   width: 10px;
   height: 12px;
   display: inline-block;
@@ -1923,16 +1942,19 @@ input[type="checkbox"] + label:hover::before {
 .perforators-description {
   background-color: #f2f6f8;
   padding-top: 65px;
-  padding-bottom: 74px;
+  padding-bottom: 71px;
 }
 
 .perforators-title {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .perforators-description p {
   margin: 0;
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-size: 13px;
+  line-height: 24px;
 }
 
 /*POPUPS*/
