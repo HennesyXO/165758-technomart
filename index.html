@@ -312,6 +312,8 @@
               <img src="img/map.jpg" width="300" height="158" alt="Карта">
             </div>
             <div class="map-popup ">
+              <a href="#" class="map-popup_close" title="Закрыть"></a>
+
               <iframe src="https://www.google.com/maps/d/embed?mid=1J-qpP7cUCJxoPEA1bmXe6Il4yiQ" width="940" height="440"></iframe>
             </div>
             <a class="mail-btn red-btn" href="#">Заблудились? Напишите нам</a>
@@ -416,7 +418,39 @@
       </form>
 
     </div>
+  <script>
+    var link = document.querySelector(".mail-btn");
+    var popup = document.querySelector(".feedback");
+    var close = popup.querySelector(".feedback__close");
 
+    link.addEventListener("click", function(event) {
+      event.preventDefault();
+      popup.classList.add("feedback-show");
+    });
+
+    close.addEventListener("click", function(event) {
+      event.preventDefault();
+      popup.classList.remove("feedback-show");
+    });
+
+
+  </script>
+  <script>
+
+    var link = document.querySelector(".map");
+    var popup = document.querySelector(".map-popup");
+    var close = popup.querySelector(".map-popup__close");
+
+    link.addEventListener("click", function(event) {
+      event.preventDefault();
+      popup.classList.add("map-popup-show");
+    });
+
+    close.addEventListener("click", function(event) {
+      event.preventDefault();
+      popup.classList.remove("map-popup-show");
+  });
+  </script>
 
   </body>
 </html>

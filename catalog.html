@@ -35,7 +35,7 @@
             <div class="header-user-block">
 
                 <a class="username" href="#">Равшан Джамшутович</a>
-
+                <a href="#" class="logout"></a>
               <div class="user-links">
                 <a href="#" class="header-user-block__my-orders">Мои заказы</a>
                 <a href="#"  class="header-user-block__settings">Личный кабинет</a>
@@ -101,7 +101,7 @@
                 </div>
                 <div class="price-controls">
                   <label class="min-price"><input name="min-price" type="text" value="0"></label>
-                  <label class="max-price">-  <input name="max-price" type="text" value="30000"></label>
+                  <label class="max-price"><input name="max-price" type="text" value="30000"></label>
                 </div>
               </div>
 
@@ -362,11 +362,29 @@
       <p class="cart-notification-title">Товар добавлен в корзину!</p>
       <div class="cart-notification-decision">
         <button type="submit" class="cart-order-btn">Оформить заказ</button>
-        <a href="#" class="cart-cancel-btn">Продолжить покупки</a>
+        <a href="catalog.html" class="cart-cancel-btn">Продолжить покупки</a>
       </div>
     </form>
   </div>
+  <script>
+    var link = document.querySelector(".buy-hover__btn");
+    var popup = document.querySelector(".cart-notification");
+    var close = popup.querySelector(".cart-notification-close");
 
+    link.addEventListener("click", function(event){
+        event.preventDefault();
+        popup.classList.add("cart-notification-show");
+    });
+
+    close.addEventListener("click", function(event) {
+      event.preventDefault();
+      popup.classList.remove("cart-notification-show");
+    });
+
+
+
+
+  </script>
   </body>
 </html>
 
