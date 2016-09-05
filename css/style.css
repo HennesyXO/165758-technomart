@@ -639,29 +639,35 @@ nav {
 }
 
 
-#feature-slider-drill:checked + label,
-#feature-slider-perforator:checked + label {
+#feature-slider-drill:checked ~ .slider-controls label[for="feature-slider-drill"],
+#feature-slider-perforator:checked ~ .slider-controls label[for="feature-slider-perforator"] {
   width: 10px;
   height: 10px;
   font-size: 10px;
   border-radius: 50%;
   border: 3px solid #ffffff;
   background-color: #ee3643;
+  cursor: pointer;
 }
 
-#feature-slider-drill:checked ~ .feature-slides {
+#feature-slider-perforator + label:after {
+  top: 220px;
+  left: 315px;
+}
+
+/*#feature-slider-drill:checked ~ .feature-slides {
   transform: translate(0);
 }
 
 #feature-slider-perforator:checked ~ .feature-slides {
   transform: translate(-620px);
 }
-
-#feature-slider-perforator:checked ~ .feature-slide .slide1 {
+*/
+#feature-slider-perforator:checked ~ .feature-slides .slide1 {
   display: block;
 }
 
-#feature-slider-drill:checked ~ .feature-slide .slide2 {
+#feature-slider-drill:checked ~ .feature-slides .slide2 {
   display: block;
 }
 
@@ -1030,10 +1036,6 @@ nav {
   background: 0 0 url(../img/vertical.png) no-repeat;
 }
 
-.services-menu input {
-  display: none;
-}
-
 .services-menu label {
   display: block;
   height: 60px;
@@ -1071,30 +1073,58 @@ nav {
   background-color: #ffffff;
 }
 
+.services-main input {
+  display: none;
+}
 
 .slide-block {
   margin-top: 60px;
   float: left;
   width: 620px;
   min-height: 280px;
+  display: none;
 }
 
 .delivery-slide {
-  display: block;
-  /*display: none;*/
+
   background: url(../img/truck.png) no-repeat right 20px;
 }
 
 .guarantee-slide {
-  display: none;
+
   background: url(../img/guarantee.png) no-repeat right top;
 }
 
 .credit-slide {
-  display: none;
-  /*display: block;*/
+
   background: url(../img/credit.png) no-repeat right top;
  }
+
+
+#delivery-slide:checked ~ .delivery-slide {
+  display: block;
+}
+
+#guarantee-slide:checked ~ .guarantee-slide {
+  display: block;
+}
+
+#credit-slide:checked ~ .credit-slide {
+  display: block;
+}
+
+
+label[for="delivery-slide"] ~ .delivery-slide {
+  display: block;
+}
+
+label[for="guarantee-slide"] ~ .guarantee-slide {
+  display: block;
+}
+
+label[for="credit-slide"] ~ .credit-slide {
+  display: block;
+}
 
 .slide-block__title {
   margin: 0;

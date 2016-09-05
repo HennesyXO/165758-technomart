@@ -93,15 +93,14 @@
           <div class="feature-item-row clearfix">
             <div class="feature-slider">
 
-              <label for="feature-slider-perforator" class="icon-left"></label>
+              <input name="toggle" type="radio" id="feature-slider-perforator" checked>
+              <input name="toggle" type="radio" id="feature-slider-drill">
 
+              <label for="feature-slider-perforator" class="icon-left"></label>
               <label for="feature-slider-drill" class="icon-right"></label>
 
               <div class="slider-controls">
-                <input name="toggle" type="radio" id="feature-slider-perforator" checked>
                 <label for="feature-slider-perforator"></label>
-
-                <input name="toggle" type="radio" id="feature-slider-drill">
                 <label for="feature-slider-drill"></label>
               </div>
 
@@ -252,18 +251,24 @@
 
               <div class="services-menu">
                 <ul>
-                  <li><label for="delivery-slide" class="services-menu-active">Доставка</label>
-                  <input type="text" id="delivery-slide">
+                  <li>
+                    <label for="delivery-slide" class="services-menu-active">Доставка</label>
                   </li>
 
-                  <li><label for="guarantee-slide">Гарантия</label>
-                  <input type="text" id="guarantee-slide">
+                  <li>
+                    <label for="guarantee-slide">Гарантия</label>
                   </li>
-                  <li><label for="credit-slide">Кредит</label>
-                  <input type="text" id="credit-slide">
+
+                  <li>
+                    <label for="credit-slide">Кредит</label>
                   </li>
                 </ul>
               </div>
+
+              <input type="radio" id="delivery-slide" checked>
+              <input type="radio" id="guarantee-slide">
+              <input type="radio" id="credit-slide">
+
 
               <div class="slide-block delivery-slide">
                 <h2 class="slide-block__title">Доставка</h2>
