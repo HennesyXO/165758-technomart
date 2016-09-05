@@ -650,10 +650,6 @@ nav {
   cursor: pointer;
 }
 
-#feature-slider-perforator + label:after {
-  top: 220px;
-  left: 315px;
-}
 
 /*#feature-slider-drill:checked ~ .feature-slides {
   transform: translate(0);
@@ -1113,18 +1109,6 @@ nav {
   display: block;
 }
 
-
-label[for="delivery-slide"] ~ .delivery-slide {
-  display: block;
-}
-
-label[for="guarantee-slide"] ~ .guarantee-slide {
-  display: block;
-}
-
-label[for="credit-slide"] ~ .credit-slide {
-  display: block;
-}
 
 .slide-block__title {
   margin: 0;
