@@ -588,7 +588,7 @@ nav {
 }
 
 .feature-slides {
-  width: 200%;
+
   transition: transform .8s ease;
 }
 
@@ -596,7 +596,7 @@ nav {
   position: relative;
   padding: 24px;
   height: 217px;
-  /*display: none;*/
+  display: none;
 }
 
 .feature-slider input {
@@ -610,7 +610,7 @@ nav {
 
 .slide2 {
   background: url(../img/drill-worker.jpg ) no-repeat 100%;
-  display: none;
+
 }
 
 
@@ -638,10 +638,6 @@ nav {
   cursor: pointer;
 }
 
-/*.slide1,
-.slide2 {
-    display: none;
-}*/
 
 #feature-slider-drill:checked + label,
 #feature-slider-perforator:checked + label {
@@ -661,13 +657,14 @@ nav {
   transform: translate(-620px);
 }
 
-#feature-slider-perforator:checked ~ .slide1 {
+#feature-slider-perforator:checked ~ .feature-slide .slide1 {
   display: block;
 }
 
-#feature-slider-drill:checked ~ .slide2 {
+#feature-slider-drill:checked ~ .feature-slide .slide2 {
   display: block;
 }
+
 
 
 
