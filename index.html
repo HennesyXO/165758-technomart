@@ -105,7 +105,7 @@
               </div>
 
               <div class="feature-slides">
-                <div class="slide slide1">
+                <div class="slide slide1" id="slide1">
                   <h2 class="feature-slider__title">Перфораторы </h2>
                   <p class="feature-slider__description">Настроящие мужские игрушки</p>
 
@@ -113,7 +113,7 @@
 
                 </div>
 
-                <div class="slide slide2">
+                <div class="slide slide2"  id="slide2">
                   <h2 class="feature-slider__title">Дрели</h2>
                   <p class="feature-slider__description">Соседям на радость!</p>
 
@@ -317,7 +317,7 @@
               <img src="img/map.jpg" width="300" height="158" alt="Карта">
             </div>
             <div class="map-popup ">
-              <a href="#" class="map-popup_close" title="Закрыть"></a>
+              <a href="#" class="map-popup__close" title="Закрыть"></a>
 
               <iframe src="https://www.google.com/maps/d/embed?mid=1J-qpP7cUCJxoPEA1bmXe6Il4yiQ" width="940" height="440"></iframe>
             </div>
@@ -403,12 +403,12 @@
           <div class="feedback-userdata">
             <div class="feedback-left-column">
               <label  class="feedback__labels" for="name">Ваше имя:</label>
-              <input type="text" id="name" placeholder="Представьтесь, пожалуйста">
+              <input type="text" id="name" name="name" placeholder="Представьтесь, пожалуйста" required>
             </div>
 
             <div class="feedback-right-column">
               <label  class="feedback__labels" for="email">Ваш e-mail:</label>
-              <input type="text" id="email" placeholder="Для отправки ответа" required>
+              <input type="text" id="email" name="email" placeholder="Для отправки ответа" required>
             </div>
           </div>
 
@@ -423,39 +423,10 @@
       </form>
 
     </div>
-  <script>
-    var link = document.querySelector(".mail-btn");
-    var popup = document.querySelector(".feedback");
-    var close = popup.querySelector(".feedback__close");
-
-    link.addEventListener("click", function(event) {
-      event.preventDefault();
-      popup.classList.add("feedback-show");
-    });
-
-    close.addEventListener("click", function(event) {
-      event.preventDefault();
-      popup.classList.remove("feedback-show");
-    });
 
 
-  </script>
-  <script>
-
-    var link = document.querySelector(".map");
-    var popup = document.querySelector(".map-popup");
-    var close = popup.querySelector(".map-popup__close");
-
-    link.addEventListener("click", function(event) {
-      event.preventDefault();
-      popup.classList.add("map-popup-show");
-    });
-
-    close.addEventListener("click", function(event) {
-      event.preventDefault();
-      popup.classList.remove("map-popup-show");
-  });
-  </script>
+    <script src="js/script.js"></script>
+    <!-- <script src="js/script.min.js"></script>  раскоментир при сдаче-->
 
   </body>
 </html>
