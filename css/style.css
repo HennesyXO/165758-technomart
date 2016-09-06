@@ -603,18 +603,6 @@ nav {
   display: none;
 }
 
-
-.slide1  {
-  background: url(../img/perf-worker.jpg ) no-repeat;
-}
-
-.slide2 {
-  background: url(../img/drill-worker.jpg ) no-repeat 100%;
-
-}
-
-
-
 .slider-controls {
   position: absolute;
   bottom: 35px;
@@ -633,36 +621,34 @@ nav {
   height: 10px;
   margin: 0 4px;
   background-color: #ffffff;
-
   border-radius: 50%;
   border: 3px solid #ffffff;
   cursor: pointer;
 }
-
-#feature-slider-perforator:checked ~ .feature-slides #slide1 {
+/*переключатель слайдов*/
+#feature-slider-perforator:checked ~ .feature-slides .slide1 {
   display: block;
 }
 
-#feature-slider-drill:checked ~ .feature-slides #slide2 {
+#feature-slider-drill:checked ~ .feature-slides .slide2 {
   display: block;
 }
-
-
+/*переключатель красной точки*/
 #feature-slider-drill:checked ~ .slider-controls label[for="feature-slider-drill"],
 #feature-slider-perforator:checked ~ .slider-controls label[for="feature-slider-perforator"] {
   background-color: #ee3643;
 
 }
 
-/*#feature-slider-perforator:checked ~ .feature-slides {
+#feature-slider-perforator:checked ~ .feature-slides {
   background: url(../img/perf-worker.jpg ) no-repeat;
 }
 
 #feature-slider-drill:checked ~ .feature-slides {
   background: url(../img/drill-worker.jpg ) no-repeat 100%;
 }
-*/
 
+/*для предзагрузки слайдов*/
 .feature-slides:before,
 .feature-slides:after {
   content: "";
@@ -678,19 +664,14 @@ nav {
   background-image: url(../img/drill-worker.jpg);
 }
 
-
-
-/*#feature-slider-drill:checked ~ .feature-slides {
+/*
+#feature-slider-drill:checked ~ .feature-slides {
   transform: translate(0);
 }
 
 #feature-slider-perforator:checked ~ .feature-slides {
   transform: translate(-620px);
-}
-*/
-
-
-
+}*/
 
 .feature-slider__title {
  color: #ffffff;
@@ -2138,6 +2119,35 @@ input[type="checkbox"] + label:hover::before {
   background: #ee3643 url(../img/icon-cross.png) 0 0 no-repeat;
 }
 
+/*Форма связи*/
+
+@keyframes bounce {
+  0%   {
+    transform: translateY(-2000px);
+  }
+  70%  {
+    transform: translateY(30px);
+  }
+  90%  {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
 .feedback {
   display: none;
   width: 620px;
@@ -2154,6 +2164,12 @@ input[type="checkbox"] + label:hover::before {
 
 .feedback-show {
   display: block;
+  animation: bounce 0.6s;
+}
+
+.feedback-error {
+  display: block;
+  animation: shake 0.6s;
 }
 
 .feedback-block {
@@ -2234,6 +2250,7 @@ input[type="checkbox"] + label:hover::before {
  text-align: center;
  border: 1px solid #ee3643;
 }
+
 
 /*Товар добавлен в корзину*/
 

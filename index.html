@@ -93,8 +93,8 @@
           <div class="feature-item-row clearfix">
             <div class="feature-slider">
 
-              <input name="toggle" type="radio" id="feature-slider-perforator" checked>
-              <input name="toggle" type="radio" id="feature-slider-drill">
+              <input name="toggle-btn" type="radio" id="feature-slider-perforator" checked>
+              <input name="toggle-btn" type="radio" id="feature-slider-drill">
 
               <label for="feature-slider-perforator" class="icon-left"></label>
               <label for="feature-slider-drill" class="icon-right"></label>
@@ -105,7 +105,7 @@
               </div>
 
               <div class="feature-slides">
-                <div class="slide slide1" id="slide1">
+                <div class="slide slide1">
                   <h2 class="feature-slider__title">Перфораторы </h2>
                   <p class="feature-slider__description">Настроящие мужские игрушки</p>
 
@@ -113,7 +113,7 @@
 
                 </div>
 
-                <div class="slide slide2"  id="slide2">
+                <div class="slide slide2">
                   <h2 class="feature-slider__title">Дрели</h2>
                   <p class="feature-slider__description">Соседям на радость!</p>
 
@@ -317,9 +317,9 @@
               <img src="img/map.jpg" width="300" height="158" alt="Карта">
             </div>
             <div class="map-popup ">
-              <a href="#" class="map-popup__close" title="Закрыть"></a>
+              <button href="#" class="map-popup__close" title="Закрыть"></button>
 
-              <iframe src="https://www.google.com/maps/d/embed?mid=1J-qpP7cUCJxoPEA1bmXe6Il4yiQ" width="940" height="440"></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.59894241239!2d30.320894615957336!3d59.938796869048055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sua!4v1473152790826" width="950" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
             <a class="mail-btn red-btn" href="#">Заблудились? Напишите нам</a>
           </div>
@@ -403,12 +403,12 @@
           <div class="feedback-userdata">
             <div class="feedback-left-column">
               <label  class="feedback__labels" for="name">Ваше имя:</label>
-              <input type="text" id="name" name="name" placeholder="Представьтесь, пожалуйста" required>
+              <input type="text" id="name" name="name" placeholder="Представьтесь, пожалуйста" value="">
             </div>
 
             <div class="feedback-right-column">
               <label  class="feedback__labels" for="email">Ваш e-mail:</label>
-              <input type="text" id="email" name="email" placeholder="Для отправки ответа" required>
+              <input type="text" id="email" name="email" placeholder="Для отправки ответа" value="">
             </div>
           </div>
 
