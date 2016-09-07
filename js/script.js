@@ -6,12 +6,19 @@ var feedbackForm = feedbackPopup.querySelector("form");
 
 var feedbackName = feedbackPopup.querySelector("[name=name]");
 var feedbackEmail = feedbackPopup.querySelector("[name=email]");
-
+var storage = localStorage.getItem("feedbackName");
 
 feedbackLink.addEventListener("click", function(event) {
   event.preventDefault();
   feedbackPopup.classList.add("feedback-show");
   feedbackName.focus();
+  if (storage) {
+    feedbackName.value = storage;
+    feedbackEmail.focus();
+    } else {
+    feedbackName.focus();
+    }
+
 });
 
 feedbackClose.addEventListener("click", function(event) {
@@ -24,6 +31,8 @@ feedbackForm.addEventListener("submit", function(event) {
     if (!feedbackName.value || !feedbackEmail.value){
     event.preventDefault();
     feedbackPopup.classList.add("feedback-error");
+    }else {
+      localStorage.setItem("feedbackName", feedbackName.value);
  }
 
 });
@@ -32,57 +41,62 @@ window.addEventListener("keydown", function(event) {
    if (event.keyCode === 27) {
      if (feedbackPopup.classList.contains("feedback-show")) {
        feedbackPopup.classList.remove("feedback-show");
-       feedbackPopup.classList.remove("feedback-error");
+       // feedbackPopup.classList.remove("feedback-error");
      }
    }
 });
 
+var mapOpen = document.querySelector(".js-open-map");
+var mapPopup = document.querySelector(".map-popup");
+var mapClose = mapPopup.querySelector(".map-popup__close");
 
-var cartLink = document.querySelectorAll(".buy-hover__btn");
-var cartPopup = document.querySelector(".cart-notification");
-var cartClose = cartPopup.querySelector(".cart-notification-close");
-
-cartLink.addEventListener("click", function(event){
+mapOpen.addEventListener("click", function(event) {
   event.preventDefault();
-  cartPopup.classList.add("cart-notification-show");
+  mapPopup.classList.add("map-popup-show");
 });
 
-cartClose.addEventListener("click", function(event) {
+
+mapClose.addEventListener("click", function(event){
   event.preventDefault();
+  mapPopup.classList.remove("map-popup-show");
+});
+
+window.addEventListener("keydown", function(event) {
+  if (event.keyCode === 27) {
+    if (mapPopup.classList.contains("map-popup-show")) {
+      mapPopup.classList.remove("map-popup-show");
+    }
+  }
+})
+
+
+var cartOpen = document.querySelectorAll(".buy-hover__btn"), i;
+var cartPopup = document.querySelector(".cart-notification");
+var cartClose = document.querySelector(".cart-notification-close");
+var cartCancel = document.querySelector(".cart-cancel-btn");
+
+for (i = 0; i < cartOpen.length; i++) {
+  cartOpen[i].addEventListener("click", function (event) {
+    event.preventDefault(event);
+    cartPopup.classList.add("cart-notification-show");
+  });
+}
+
+cartClose.addEventListener("click", function(event) {
+   event.preventDefault();
+   cartPopup.classList.remove("cart-notification-show");
+ });
+
+cartCancel.addEventListener("click", function (event) {
+  event.preventDefault(event);
   cartPopup.classList.remove("cart-notification-show");
 });
 
-
-
-
-var link = document.querySelector(".map");
-var popup = document.querySelector(".map-popup");
-var close = popup.querySelector(".map-popup__close");
-
-link.addEventListener("click", function(event) {
-  event.preventDefault();
-  popup.classList.add("map-popup-show");
+window.addEventListener("keydown", function (event) {
+    if (event.keyCode == 27) {
+        if (cartPopup.classList.contains("cart-notification-show")) {
+            cartPopup.classList.remove("cart-notification-show");
+        }
+    }
 });
 
-close.addEventListener("click", function(event) {
-  event.preventDefault();
-  popup.classList.remove("map-popup-show");
-});
-
-
-// function initialize() {
-//   var mapOptions = {
-//     zoom: 15,
-//     center: new google.maps.LatLng(59.93886, 30.32301)
-//   }
-//   var map = new google.maps.Map(document.getElementById('map-canvas'),
-//                                 mapOptions);
-//   var image = "http://i.neoseeker.com/mgv/499846/846/33/15847_179440563793_179437393793_2772323_4548598_n_icon.jpg";
-//   var myLatLng = new google.maps.LatLng(59.93886, 30.32301);
-//   var beachMarker = new google.maps.Marker({
-//     position: myLatLng,
-//     map: map,
-//     icon: image
-//   });
-// }
-// google.maps.event.addDomListener(window, 'load', initialize);

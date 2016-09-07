@@ -149,7 +149,7 @@
                 <img src="img/bosch-9000.jpg" width="218" height="169" alt="Перфоратор Bosch BFG 9000">
               </div>
               <div class="buy-hover">
-                <a class="buy-hover__btn" href="#">Купить</a>
+                <a class="buy-hover__btn js-open-cart" href="#">Купить</a>
                 <a class="buy-hover__bookmark" href="#">В закладки</a>
               </div>
               <h5 class="catalog-item__description">Перфоратор BOSCH BFG 9000</h5>
@@ -312,14 +312,10 @@
           <div class="company-contacts">
             <h3  class="company-title">Контакты</h3>
             <p>Вы можете забрать товар сами,<br> заехав в наш офис:</p>
-            <div class="map"  id="map-canvas">
+            <div class="map js-open-map"  id="map-canvas">
               <img src="img/map.jpg" width="300" height="158" alt="Карта">
             </div>
-            <div class="map-popup ">
-              <button href="#" class="map-popup__close" title="Закрыть"></button>
 
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.59894241239!2d30.320894615957336!3d59.938796869048055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sua!4v1473152790826" width="950" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-            </div>
             <a class="mail-btn red-btn" href="#">Заблудились? Напишите нам</a>
           </div>
         </div>  <!-- container -->
@@ -391,8 +387,10 @@
       </div>
     </footer>
 
-    <div class="map-popup">
-      <button class="cross"></button>
+    <div class="map-popup ">
+      <button class="map-popup__close" title="Закрыть"></button>
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.59894241239!2d30.320894615957336!3d59.938796869048055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sua!4v1473152790826" width="950" height="450" style="border:0" allowfullscreen></iframe>
     </div>
 
     <div class="feedback container">
@@ -423,7 +421,19 @@
 
     </div>
 
+    <div class="cart-notification">
+    <button class="cart-notification-close"></button>
+    <form action="/cart" method="post">
+      <p class="cart-notification-title">Товар добавлен в корзину!</p>
+      <div class="cart-notification-decision">
+        <button type="submit" class="cart-order-btn">Оформить заказ</button>
+        <a href="catalog.html" class="cart-cancel-btn">Продолжить покупки</a>
+      </div>
+    </form>
+  </div>
 
+    <script src="http://maps.googleapis.com/maps/api/js?v=3&amp;sensor=false">
+    </script>
     <script src="js/script.js"></script>
     <!-- <script src="js/script.min.js"></script>  раскоментир при сдаче-->
 
