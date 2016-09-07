@@ -136,8 +136,6 @@ img {
   width: 270px;
   position: relative;
   float: left;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   font-size: 0;
 
@@ -164,8 +162,6 @@ img {
   background: url(../img/icon-search.png) 15px 8px no-repeat;
   border: none;
   outline: none;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -242,9 +238,7 @@ img {
   text-decoration: none;
   color: #ffffff;
   font-size: 17px;
- -webkit-box-sizing: border-box;
- -moz-box-sizing: border-box;
-  box-sizing: border-box;
+ box-sizing: border-box;
 }
 
 .header-top__bookmarks::before {
@@ -275,9 +269,7 @@ img {
   color: #ffffff;
   font-size: 17px;
   padding: 8px 0 8px 50px;
- -webkit-box-sizing: border-box;
- -moz-box-sizing: border-box;
-  box-sizing: border-box;
+ box-sizing: border-box;
 }
 
 .header-top__cart::before {
@@ -309,9 +301,7 @@ img {
   color: #ffffff;
   font-size: 17px;
   text-decoration: none;
- -webkit-box-sizing: border-box;
- -moz-box-sizing: border-box;
-  box-sizing: border-box;
+ box-sizing: border-box;
   background-color: #63a63e;
 }
 
@@ -496,8 +486,6 @@ nav {
   padding: 20px 22px;
   margin-right: 20px;
   margin-bottom: 20px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -526,8 +514,6 @@ nav {
   line-height: 18px;
   text-align: center;
   border-radius: 2px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -780,8 +766,6 @@ nav {
   margin-right: 20px;
   margin-bottom: 20px;
   overflow: hidden;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -850,9 +834,6 @@ nav {
   text-decoration: none;
   box-shadow: 0 3px 0 #367315;
   border-radius: 3px;
-
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -893,9 +874,6 @@ nav {
   text-decoration: none;
   border: 3px solid #63a63e;
   border-radius: 3px;
-
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -944,8 +922,6 @@ nav {
   font-weight: bold;
   line-height: 18px;
   color: #ffffff;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -975,8 +951,6 @@ nav {
   border: 1px solid #e5e5e5;
   margin-right: 20px;
   margin-bottom: 20px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -1050,8 +1024,6 @@ nav {
   line-height: 30px;
   font-family: 'Cuprum', 'Arial', sans-serif;
   text-transform: none;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -1128,8 +1100,6 @@ nav {
   width: 195px;
   margin-top: 30px;
   text-transform: uppercase;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 /*О компании*/
@@ -1193,8 +1163,6 @@ nav {
 .more-info-btn {
   width: 220px;
   text-transform: uppercase;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -1210,8 +1178,6 @@ nav {
 .mail-btn {
   width: 300px;
   text-transform: uppercase;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 
 }
@@ -1729,8 +1695,6 @@ label {
  border-radius: 5px;
  outline: none;
  background-color: #f7f3ec;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -2031,8 +1995,6 @@ input[type="checkbox"] + label:hover::before {
   color: #000;
   text-decoration: none;
   text-transform: uppercase;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -2047,8 +2009,6 @@ input[type="checkbox"] + label:hover::before {
 .catalog-paginator .catalog-paginator-next {
   width: 138px;
   padding: 9px 30px 11px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -2090,6 +2050,7 @@ input[type="checkbox"] + label:hover::before {
   position: fixed;
   top: 50%;
   left: 50%;
+  /*transform: translate(-50%, -50%);*/
   width: 940px;
   height: 447px;
   margin-left: -470px;
@@ -2108,19 +2069,21 @@ input[type="checkbox"] + label:hover::before {
   width: 25px;
   height: 5px;
   transform: rotate(-45deg);
-  background: #ee3643 url(../img/icon-cross.png) 0 0 no-repeat;
+  background-color: #ee3643;
 }
 
 .map-popup__close::after {
   position: absolute;
-  right: 0px;
-  top: 0px;
+  right: -2px;
+  top: -1px;
   width: 25px;
   height: 5px;
   transform: rotate(90deg);
   content: "";
-  background: #ee3643 url(../img/icon-cross.png) 0 0 no-repeat;
+  background-color: #ee3643;
+
 }
+
 
 /*Форма связи*/
 
@@ -2154,9 +2117,10 @@ input[type="checkbox"] + label:hover::before {
 .feedback {
   display: none;
   width: 620px;
-  position: absolute;
-  top: 2500px;
-  left: 25%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   padding: 0;
   padding-top: 48px;
   border-top: solid 7px #ee3643;
@@ -2259,9 +2223,10 @@ input[type="checkbox"] + label:hover::before {
 
 .cart-notification {
   display: none;
-  position: absolute;
-  top: 1000px;
+  position: fixed;
+  top: 50%;
   left: 50%;
+  transform: translate(0, -15%);
   width: 620px;
   padding-top: 66px;
   margin-top: -200px;
@@ -2352,8 +2317,6 @@ input[type="checkbox"] + label:hover::before {
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 

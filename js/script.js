@@ -1,65 +1,76 @@
-
 var feedbackLink = document.querySelector(".mail-btn");
 var feedbackPopup = document.querySelector(".feedback");
-var feedbackClose = feedbackPopup.querySelector(".feedback__close");
-var feedbackForm = feedbackPopup.querySelector("form");
+if (feedbackPopup) {
+  var feedbackClose = feedbackPopup.querySelector(".feedback__close");
+  var feedbackForm = feedbackPopup.querySelector("form");
 
-var feedbackName = feedbackPopup.querySelector("[name=name]");
-var feedbackEmail = feedbackPopup.querySelector("[name=email]");
+  var feedbackName = feedbackPopup.querySelector("[name=name]");
+  var feedbackEmail = feedbackPopup.querySelector("[name=email]");
+}
+
 var storage = localStorage.getItem("feedbackName");
 
-feedbackLink.addEventListener("click", function(event) {
-  event.preventDefault();
-  feedbackPopup.classList.add("feedback-show");
-  feedbackName.focus();
-  if (storage) {
-    feedbackName.value = storage;
-    feedbackEmail.focus();
-    } else {
-    feedbackName.focus();
-    }
-
-});
-
-feedbackClose.addEventListener("click", function(event) {
-  event.preventDefault();
-  feedbackPopup.classList.remove("feedback-show");
-  feedbackPopup.classList.remove("feedback-error");
-});
-
-feedbackForm.addEventListener("submit", function(event) {
-    if (!feedbackName.value || !feedbackEmail.value){
+if (feedbackLink) {
+  feedbackLink.addEventListener("click", function(event) {
     event.preventDefault();
-    feedbackPopup.classList.add("feedback-error");
-    }else {
-      localStorage.setItem("feedbackName", feedbackName.value);
- }
+    feedbackPopup.classList.add("feedback-show");
+    feedbackName.focus();
+    if (storage) {
+      feedbackName.value = storage;
+      feedbackEmail.focus();
+      } else {
+      feedbackName.focus();
+      }
+  });
+}
 
-});
+if (feedbackClose) {
+  feedbackClose.addEventListener("click", function(event) {
+    event.preventDefault();
+    feedbackPopup.classList.remove("feedback-show");
+    feedbackPopup.classList.remove("feedback-error");
+  });
+}
+
+if (feedbackForm) {
+  feedbackForm.addEventListener("submit", function(event) {
+      if (!feedbackName.value || !feedbackEmail.value){
+      event.preventDefault();
+      feedbackPopup.classList.add("feedback-error");
+      }else {
+        localStorage.setItem("feedbackName", feedbackName.value);
+   }
+  });
+}
 
 window.addEventListener("keydown", function(event) {
    if (event.keyCode === 27) {
      if (feedbackPopup.classList.contains("feedback-show")) {
        feedbackPopup.classList.remove("feedback-show");
-       // feedbackPopup.classList.remove("feedback-error");
      }
    }
 });
 
+
 var mapOpen = document.querySelector(".js-open-map");
 var mapPopup = document.querySelector(".map-popup");
-var mapClose = mapPopup.querySelector(".map-popup__close");
+if (mapPopup) {
+  var mapClose = mapPopup.querySelector(".map-popup__close");
+}
 
-mapOpen.addEventListener("click", function(event) {
-  event.preventDefault();
-  mapPopup.classList.add("map-popup-show");
-});
+if (mapOpen) {
+  mapOpen.addEventListener("click", function(event) {
+    event.preventDefault();
+    mapPopup.classList.add("map-popup-show");
+  });
+}
 
-
-mapClose.addEventListener("click", function(event){
-  event.preventDefault();
-  mapPopup.classList.remove("map-popup-show");
-});
+if (mapClose) {
+  mapClose.addEventListener("click", function(event){
+    event.preventDefault();
+    mapPopup.classList.remove("map-popup-show");
+  });
+}
 
 window.addEventListener("keydown", function(event) {
   if (event.keyCode === 27) {
@@ -68,6 +79,7 @@ window.addEventListener("keydown", function(event) {
     }
   }
 })
+
 
 
 var cartOpen = document.querySelectorAll(".buy-hover__btn"), i;
@@ -87,6 +99,7 @@ cartClose.addEventListener("click", function(event) {
    cartPopup.classList.remove("cart-notification-show");
  });
 
+
 cartCancel.addEventListener("click", function (event) {
   event.preventDefault(event);
   cartPopup.classList.remove("cart-notification-show");
@@ -102,6 +115,7 @@ window.addEventListener("keydown", function (event) {
 
 
 
+
 var catalogCartOpen = document.querySelectorAll(".js-open-cart"), i;
 var catalogCartPopup = document.querySelector(".cart-notification");
 var catalogCartClose = document.querySelector(".cart-notification-close");
@@ -114,15 +128,23 @@ for (i = 0; i < catalogCartOpen.length; i++) {
   });
 }
 
-catalogCartClose.addEventListener("click", function(event) {
-   event.preventDefault();
-   catalogCartPopup.classList.remove("cart-notification-show");
- });
 
-catalogCartCancel.addEventListener("click", function (event) {
-  event.preventDefault(event);
-  catalogCartPopup.classList.remove("cart-notification-show");
-});
+
+if (catalogCartClose) {
+  catalogCartClose.addEventListener("click", function(event) {
+     event.preventDefault();
+     catalogCartPopup.classList.remove("cart-notification-show");
+   });
+}
+
+
+if (catalogCartCancel) {
+  catalogCartCancel.addEventListener("click", function (event) {
+    event.preventDefault(event);
+    catalogCartPopup.classList.remove("cart-notification-show");
+  });
+}
+
 
 window.addEventListener("keydown", function (event) {
     if (event.keyCode == 27) {
