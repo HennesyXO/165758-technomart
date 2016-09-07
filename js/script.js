@@ -100,3 +100,34 @@ window.addEventListener("keydown", function (event) {
     }
 });
 
+
+
+var catalogCartOpen = document.querySelectorAll(".js-open-cart"), i;
+var catalogCartPopup = document.querySelector(".cart-notification");
+var catalogCartClose = document.querySelector(".cart-notification-close");
+var catalogCartCancel = document.querySelector(".cart-cancel-btn");
+
+for (i = 0; i < catalogCartOpen.length; i++) {
+  catalogCartOpen[i].addEventListener("click", function (event) {
+    event.preventDefault(event);
+    catalogCartPopup.classList.add("cart-notification-show");
+  });
+}
+
+catalogCartClose.addEventListener("click", function(event) {
+   event.preventDefault();
+   catalogCartPopup.classList.remove("cart-notification-show");
+ });
+
+catalogCartCancel.addEventListener("click", function (event) {
+  event.preventDefault(event);
+  catalogCartPopup.classList.remove("cart-notification-show");
+});
+
+window.addEventListener("keydown", function (event) {
+    if (event.keyCode == 27) {
+        if (catalogCartPopup.classList.contains("cart-notification-show")) {
+            catalogCartPopup.classList.remove("cart-notification-show");
+        }
+    }
+});
