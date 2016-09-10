@@ -331,38 +331,10 @@ img {
 
 }
 
-.header-top__search::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 7%;
-  transform: translate(0, -50%);
-  background-image: url("../img/sprite.png");
-  background-repeat: no-repeat;
-  width: 17px;
-  height: 17px;
-  background-position: -800px -10px;
-  z-index: 1;
-}
-
-.header-top__search:focus::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 7%;
-  transform: translate(0, -50%);
-  background-image: url("../img/sprite.png");
-  background-repeat: no-repeat;
-  width: 17px;
-  height: 17px;
-  background-position: -837px -10px;
-  z-index: 2;
-}
-
 .header-top__search:focus {
   background-color: #fff;
-}
 
+}
 
 .search-field {
   position: relative;
@@ -373,24 +345,25 @@ img {
   display: inline-block;
   vertical-align: top;
   background-color: #293449;
+  /*opacity: 0.3;*/
   font-size: 17px;
   line-height: 18px;
   color: #ffffff;
+  background: url(../img/icon-search.png) 15px 8px no-repeat;
   border: none;
   outline: none;
   box-sizing: border-box;
 }
 
 .search-field:hover {
-  background-color: #212a3a;
+  opacity: 1;
 }
 
 .search-field:focus {
   background-color: #ffffff;
   color: #000000;
   background: #fff url(../img/icon-search-red.png) 15px 8px no-repeat;
-  z-index: 2;
-}
+ }
 
 .search-field::-webkit-input-placeholder {
   font-family: 'Cuprum', 'Arial', sans-serif;
@@ -1219,10 +1192,10 @@ nav {
   line-height: 24px;
 }
 
-.services-main {
-  margin-bottom: 80px;
+/*.services-main {
+  margin-bottom: 85px;
 }
-
+*/
 .services-menu {
   float: left;
   width: 240px;
@@ -1348,7 +1321,8 @@ nav {
 }
 /*О компании*/
 .company-info {
-  padding-bottom: 85px;
+  padding-top: 83px;
+  padding-bottom: 86px;
 }
 
 .company-description {
@@ -1365,6 +1339,7 @@ nav {
 .company-title {
   margin: 0;
   margin-bottom: 30px;
+  line-height: auto
 }
 
 .company-description p,
@@ -1381,7 +1356,7 @@ nav {
   padding: 0;
   width: 215px;
   margin-left: 38px;
-  margin-bottom: 36px;
+  margin-bottom: 38px;
 
 }
 
@@ -1390,14 +1365,14 @@ nav {
   margin-bottom: 20px;
   font-size: 18px;
   font-weight: normal;
-  line-height: 20px;
+  line-height: 19px;
 
 }
 
 .company-list li::before {
   position: absolute;
-  top: 10px;
-  left: -39px;
+  top: 9px;
+  left: -37px;
   width: 25px;
   height: 2px;
   background-color: #fb565a;
@@ -1411,7 +1386,7 @@ nav {
 }
 
 .company-contacts p {
-  padding-bottom: 33px;
+  padding-bottom: 31px;
 }
 
 .map {
@@ -1478,57 +1453,56 @@ nav {
 
 }
 
-.footer-menu__top,
-.footer-menu__bottom {
+.footer-menu__top {
   float: right;
-  width: 610px;
+  width: 587px;
   padding-top: 36px;
+  padding-bottom: 35px;
 }
 
 .footer-menu__bottom {
-  width: 520px;
+  width: 525px;
   float: right;
-  text-align: left;
 }
 
 .footer-menu__top ul,
 .footer-menu__bottom ul{
-
   margin: 0;
   padding: 0;
   list-style: none;
   font-size: 0;
 }
 
-/*.footer-menu__bottom ul{
-  float: right;
-  width: 520px;
-}*/
+.footer-menu__top li {
+  display: inline-block;
+  vertical-align: top;
+  width: 122px;
+  text-align: right;
+  font-size: 18px;
+  /*line-height: 24px;*/
+}
 
-.footer-menu__top li,
+.footer-menu__top li:nth-child(1),
+.footer-menu__top li:nth-child(2),
+.footer-menu__top li:nth-child(3) {
+  width: 114px;
+}
+
 .footer-menu__bottom li {
-
+  width: 128px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
   font-size: 18px;
   line-height: 24px;
-  display: inline-block;
-  vertical-align: middle;
-  text-align: right;
 }
 
-.footer-menu__top li {
-  min-width: 50px;
-  margin-left: 59px;
-
+.footer-menu__bottom li:nth-child(1),
+.footer-menu__bottom li:nth-child(3) {
+  width: 140px;
 }
-
-.footer-menu__bottom li {
-  width: 130px;
-  text-align: left;
-
-}
-
-.footer-menu__bottom li:last-child {
-    margin-right: 0;
+.footer-menu__bottom li:nth-child(2) {
+  width: 116px;
 }
 
 .footer-menu__top a,
